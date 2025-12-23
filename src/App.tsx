@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
+import { Intro } from "./components/Intro";
 import { Layout } from "./components/Layout";
 import { Angebot } from "./sections/Angebot";
 import { Hero } from "./sections/Hero";
@@ -9,18 +11,23 @@ import { Rechtliches } from "./sections/Rechtliches";
 import { Team } from "./sections/Team";
 
 export default function App() {
+  const [showIntro, setShowIntro] = useState(true);
+
   return (
-    <Layout>
-      <Header />
-      <main id="main-content">
-        <Hero />
-        <Angebot />
-        <Team />
-        <Praxis />
-        <Kontakt />
-        <Rechtliches />
-      </main>
-      <Footer />
-    </Layout>
+    <>
+      {showIntro && <Intro onComplete={() => setShowIntro(false)} />}
+      <Layout>
+        <Header />
+        <main id="main-content">
+          <Hero />
+          <Angebot />
+          <Team />
+          <Praxis />
+          <Kontakt />
+          <Rechtliches />
+        </main>
+        <Footer />
+      </Layout>
+    </>
   );
 }

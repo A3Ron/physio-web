@@ -1,4 +1,5 @@
 import { Card, CardContent, CardHeader, CardTitle } from "../components/Card";
+import { FadeInView, motion, staggerContainer, staggerItem } from "../components/Motion";
 import { Section } from "../components/Section";
 import { siteConfig } from "../config/site";
 
@@ -82,23 +83,31 @@ export function Angebot() {
       subtitle={`Bei ${practiceName} bieten wir Ihnen ein breites Spektrum an physiotherapeutischen Behandlungen – individuell auf Ihre Bedürfnisse abgestimmt.`}
       background="surface"
     >
-      <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <motion.div
+        className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, margin: "-50px" }}
+        variants={staggerContainer}
+      >
         {services.map((service) => (
-          <Card key={service.id} className="flex flex-col">
-            <CardHeader className="flex items-start gap-4">
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-secondary">
-                <ServiceIcon icon={service.icon} />
-              </div>
-              <CardTitle>{service.title}</CardTitle>
-            </CardHeader>
-            <CardContent className="flex-1">
-              <p className="text-sm leading-relaxed">{service.description}</p>
-            </CardContent>
-          </Card>
+          <motion.div key={service.id} variants={staggerItem}>
+            <Card className="flex h-full flex-col transition-transform duration-300 hover:-translate-y-1 hover:shadow-lg">
+              <CardHeader className="flex items-start gap-4">
+                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-lg bg-secondary">
+                  <ServiceIcon icon={service.icon} />
+                </div>
+                <CardTitle>{service.title}</CardTitle>
+              </CardHeader>
+              <CardContent className="flex-1">
+                <p className="text-sm leading-relaxed">{service.description}</p>
+              </CardContent>
+            </Card>
+          </motion.div>
         ))}
-      </div>
+      </motion.div>
 
-      <div className="mt-12 text-center">
+      <FadeInView className="mt-12 text-center" delay={0.3}>
         <p className="text-text-muted">
           Haben Sie Fragen zu unseren Leistungen?{" "}
           <a href="#kontakt" className="font-medium text-primary hover:underline">
@@ -106,7 +115,7 @@ export function Angebot() {
           </a>{" "}
           – wir beraten Sie gerne.
         </p>
-      </div>
+      </FadeInView>
     </Section>
   );
 }
