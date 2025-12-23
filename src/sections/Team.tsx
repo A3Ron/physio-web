@@ -60,17 +60,6 @@ export function Team() {
           </Card>
         ))}
       </div>
-
-      <div className="mt-12 rounded-xl bg-secondary p-8 text-center">
-        <h3 className="mb-3 text-xl font-semibold text-text">Werden Sie Teil unseres Teams</h3>
-        <p className="mb-4 text-text-muted">
-          Sie sind Physiotherapeut/in und suchen eine neue Herausforderung? Wir freuen uns auf Ihre
-          Bewerbung!
-        </p>
-        <a href="#kontakt" className="font-medium text-primary hover:underline">
-          Jetzt bewerben →
-        </a>
-      </div>
     </Section>
   );
 }
