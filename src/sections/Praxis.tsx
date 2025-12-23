@@ -154,13 +154,28 @@ export function Praxis() {
           </motion.div>
         </motion.div>
 
-        {/* Map Placeholder */}
+        {/* Google Maps Embed */}
         <FadeInView className="relative" delay={0.2}>
           <div className="sticky top-24">
-            <div className="aspect-[4/3] overflow-hidden rounded-xl border border-gray-100 bg-gradient-to-br from-secondary to-primary/5 shadow-sm lg:aspect-square">
-              <div className="flex h-full flex-col items-center justify-center p-8 text-center">
+            <div className="aspect-[4/3] overflow-hidden rounded-xl border border-gray-100 shadow-sm lg:aspect-square">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2709.8!2d8.5975!3d47.2559!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x479aa94e9d11c7a1%3A0x0!2sEisenhofstrasse%202%2C%208810%20Horgen!5e0!3m2!1sde!2sch!4v1"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="Rumpfwerk Standort - Eisenhofstrasse 2, 8810 Horgen"
+                className="h-full w-full"
+              />
+            </div>
+
+            {/* Quick action below map */}
+            <div className="mt-4 flex flex-col items-center gap-2 text-center">
+              <ButtonLink href={contact.mapLink} variant="outline" size="sm">
                 <svg
-                  className="mb-4 h-16 w-16 text-primary/30"
+                  className="mr-2 h-4 w-4"
                   fill="none"
                   viewBox="0 0 24 24"
                   stroke="currentColor"
@@ -169,21 +184,16 @@ export function Praxis() {
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    strokeWidth={1}
-                    d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"
+                    strokeWidth={2}
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
                   />
                 </svg>
-                <p className="mb-4 text-text-muted">Finden Sie uns ganz einfach mit Google Maps</p>
-                <ButtonLink href={contact.mapLink} variant="primary" size="sm">
-                  In Google Maps öffnen
-                </ButtonLink>
-              </div>
+                In Google Maps öffnen
+              </ButtonLink>
+              <p className="text-sm text-text-muted">
+                Barrierefrei zugänglich · Parkplätze in der Nähe
+              </p>
             </div>
-
-            {/* Accessibility Notice */}
-            <p className="mt-4 text-center text-sm text-text-muted">
-              Unsere Praxis ist barrierefrei zugänglich. Parkplätze sind in der Nähe vorhanden.
-            </p>
           </div>
         </FadeInView>
       </div>
