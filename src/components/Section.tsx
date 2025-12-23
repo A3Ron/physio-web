@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { FadeInView } from "./Motion";
 
 interface SectionProps {
   id: string;
@@ -31,7 +32,7 @@ export function Section({
     >
       <div className="container-width mx-auto">
         {(title || subtitle) && (
-          <div className="mb-12 text-center md:mb-16">
+          <FadeInView className="mb-12 text-center md:mb-16">
             {title && (
               <h2 id={`${id}-heading`} className="mb-4 text-balance text-text">
                 {title}
@@ -40,7 +41,7 @@ export function Section({
             {subtitle && (
               <p className="mx-auto max-w-2xl text-balance text-lg text-text-muted">{subtitle}</p>
             )}
-          </div>
+          </FadeInView>
         )}
         {children}
       </div>

@@ -1,4 +1,5 @@
 import { ButtonLink } from "../components/Button";
+import { FadeInView, motion, staggerContainer, staggerItem } from "../components/Motion";
 import { Section } from "../components/Section";
 import { siteConfig } from "../config/site";
 
@@ -14,9 +15,18 @@ export function Praxis() {
     >
       <div className="grid gap-8 lg:grid-cols-2">
         {/* Praxis Information */}
-        <div className="space-y-6">
+        <motion.div
+          className="space-y-6"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true, margin: "-50px" }}
+          variants={staggerContainer}
+        >
           {/* Address Card */}
-          <div className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
+          <motion.div
+            variants={staggerItem}
+            className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-md"
+          >
             <h3 className="mb-4 flex items-center gap-3 text-lg font-semibold text-text">
               <svg
                 className="h-6 w-6 text-primary"
@@ -69,10 +79,13 @@ export function Praxis() {
                 Route planen
               </ButtonLink>
             </div>
-          </div>
+          </motion.div>
 
           {/* Opening Hours */}
-          <div className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
+          <motion.div
+            variants={staggerItem}
+            className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-md"
+          >
             <h3 className="mb-4 flex items-center gap-3 text-lg font-semibold text-text">
               <svg
                 className="h-6 w-6 text-primary"
@@ -98,10 +111,13 @@ export function Praxis() {
                 </li>
               ))}
             </ul>
-          </div>
+          </motion.div>
 
           {/* Contact Quick Info */}
-          <div className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm">
+          <motion.div
+            variants={staggerItem}
+            className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-md"
+          >
             <h3 className="mb-4 flex items-center gap-3 text-lg font-semibold text-text">
               <svg
                 className="h-6 w-6 text-primary"
@@ -135,11 +151,11 @@ export function Praxis() {
                 <span className="font-medium text-text">{contact.email}</span>
               </a>
             </div>
-          </div>
-        </div>
+          </motion.div>
+        </motion.div>
 
         {/* Map Placeholder */}
-        <div className="relative">
+        <FadeInView className="relative" delay={0.2}>
           <div className="sticky top-24">
             <div className="aspect-[4/3] overflow-hidden rounded-xl border border-gray-100 bg-gradient-to-br from-secondary to-primary/5 shadow-sm lg:aspect-square">
               <div className="flex h-full flex-col items-center justify-center p-8 text-center">
@@ -169,7 +185,7 @@ export function Praxis() {
               Unsere Praxis ist barrierefrei zugänglich. Parkplätze sind in der Nähe vorhanden.
             </p>
           </div>
-        </div>
+        </FadeInView>
       </div>
     </Section>
   );

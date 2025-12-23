@@ -1,4 +1,5 @@
 import { ButtonLink } from "../components/Button";
+import { motion } from "../components/Motion";
 import { siteConfig } from "../config/site";
 
 export function Hero() {
@@ -12,35 +13,66 @@ export function Hero() {
     >
       {/* Decorative background elements */}
       <div className="absolute inset-0 overflow-hidden" aria-hidden="true">
-        <div className="absolute -right-40 -top-40 h-80 w-80 rounded-full bg-primary/5" />
-        <div className="absolute -bottom-20 -left-20 h-60 w-60 rounded-full bg-accent/5" />
+        <motion.div
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
+          className="absolute -right-40 -top-40 h-80 w-80 rounded-full bg-primary/5"
+        />
+        <motion.div
+          initial={{ scale: 0, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 1, delay: 0.7, ease: "easeOut" }}
+          className="absolute -bottom-20 -left-20 h-60 w-60 rounded-full bg-accent/5"
+        />
       </div>
 
       <div className="container-width relative mx-auto px-4 py-16 md:px-6 md:py-24">
         <div className="grid items-center gap-12 lg:grid-cols-2">
           {/* Content */}
           <div className="max-w-2xl">
-            <h1 id="hero-heading" className="mb-6 text-balance leading-tight">
+            <motion.h1
+              id="hero-heading"
+              className="mb-6 text-balance leading-tight"
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, ease: "easeOut" }}
+            >
               <span className="text-primary">{practiceName}</span>
               <br />
               <span className="text-text">{tagline}</span>
-            </h1>
+            </motion.h1>
 
-            <p className="mb-8 text-balance text-lg leading-relaxed text-text-muted md:text-xl">
+            <motion.p
+              className="mb-8 text-balance text-lg leading-relaxed text-text-muted md:text-xl"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.2, ease: "easeOut" }}
+            >
               {description}
-            </p>
+            </motion.p>
 
-            <div className="mb-8 flex flex-col gap-4 sm:flex-row">
+            <motion.div
+              className="mb-8 flex flex-col gap-4 sm:flex-row"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.7, delay: 0.4, ease: "easeOut" }}
+            >
               <ButtonLink href="#kontakt" size="lg">
                 Termin anfragen
               </ButtonLink>
               <ButtonLink href="#angebot" variant="outline" size="lg">
                 Unsere Leistungen
               </ButtonLink>
-            </div>
+            </motion.div>
 
             {/* Quick Contact Info */}
-            <div className="flex flex-col gap-3 text-text-muted sm:flex-row sm:gap-6">
+            <motion.div
+              className="flex flex-col gap-3 text-text-muted sm:flex-row sm:gap-6"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 0.7, delay: 0.6, ease: "easeOut" }}
+            >
               <a
                 href={`tel:${contact.phone}`}
                 className="flex items-center gap-2 transition-colors hover:text-primary"
@@ -81,11 +113,17 @@ export function Hero() {
                 </svg>
                 <span>{contact.email}</span>
               </a>
-            </div>
+            </motion.div>
           </div>
 
           {/* Hero Image Placeholder */}
-          <div className="relative hidden lg:block" aria-hidden="true">
+          <motion.div
+            className="relative hidden lg:block"
+            aria-hidden="true"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.8, delay: 0.3, ease: "easeOut" }}
+          >
             <div className="aspect-[4/3] overflow-hidden rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 shadow-xl">
               <div className="flex h-full items-center justify-center">
                 <div className="text-center">
@@ -107,9 +145,17 @@ export function Hero() {
               </div>
             </div>
             {/* Decorative elements */}
-            <div className="absolute -bottom-6 -left-6 h-24 w-24 rounded-xl bg-primary/10" />
-            <div className="absolute -right-6 -top-6 h-16 w-16 rounded-full bg-accent/20" />
-          </div>
+            <motion.div
+              className="absolute -bottom-6 -left-6 h-24 w-24 rounded-xl bg-primary/10"
+              animate={{ y: [0, -8, 0] }}
+              transition={{ duration: 4, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+            />
+            <motion.div
+              className="absolute -right-6 -top-6 h-16 w-16 rounded-full bg-accent/20"
+              animate={{ y: [0, 8, 0] }}
+              transition={{ duration: 3.5, repeat: Number.POSITIVE_INFINITY, ease: "easeInOut" }}
+            />
+          </motion.div>
         </div>
       </div>
     </section>
