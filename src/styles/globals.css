@@ -5,15 +5,15 @@
 @layer base {
   :root {
     /* RGB values for Tailwind opacity support */
-    /* Salbeigrün / Sage Green color scheme */
-    --color-primary: 111 143 122;
-    --color-primary-dark: 90 122 101;
-    --color-secondary: 242 245 243;
-    --color-accent: 214 207 196;
-    --color-background: 247 247 244;
-    --color-surface: 255 255 255;
-    --color-text: 58 58 58;
-    --color-text-muted: 107 107 107;
+    /* Warm Beige / Tan color scheme */
+    --color-primary: 102 73 48;
+    --color-primary-dark: 82 58 38;
+    --color-secondary: 255 219 187;
+    --color-accent: 153 126 103;
+    --color-background: 204 190 177;
+    --color-surface: 255 243 235;
+    --color-text: 102 73 48;
+    --color-text-muted: 140 110 85;
   }
 
   html {
