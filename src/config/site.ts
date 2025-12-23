@@ -72,14 +72,14 @@ export const siteConfig = {
   // Change these values to update the entire site's color scheme
   // ============================================
   colors: {
-    primary: "#96524c", // Kastanienbraun - main brand color
-    primaryDark: "#80413c", // Darker chestnut for hover states
-    secondary: "#fcf7f6", // Very light warm for backgrounds
-    accent: "#b4736c", // Soft chestnut accent
-    background: "#ffffff", // Main background
-    surface: "#fdfaf9", // Card/section backgrounds
-    text: "#3a2a28", // Main text color (warm dark brown)
-    textMuted: "#826964", // Secondary/muted text
+    primary: "#6F8F7A", // Salbeigrün - main brand color
+    primaryDark: "#5A7A65", // Darker sage for hover states
+    secondary: "#F2F5F3", // Very light sage for backgrounds
+    accent: "#D6CFC4", // Sand/Stein accent
+    background: "#F7F7F4", // Off-White background
+    surface: "#FFFFFF", // Card/section backgrounds (white)
+    text: "#3A3A3A", // Warmes Grau - main text
+    textMuted: "#6B6B6B", // Secondary/muted text
   },
 
   // ============================================
