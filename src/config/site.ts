@@ -16,11 +16,11 @@ export const siteConfig = {
   // CONTACT INFORMATION
   // ============================================
   contact: {
-    email: "info@physio-horgen.ch",
+    email: "info@rumpfwerk.ch",
     phone: "+41 44 123 45 67",
     phoneDisplay: "044 123 45 67",
     address: {
-      street: "Seestrasse 123",
+      street: "Eisenhofstrasse 2",
       zip: "8810",
       city: "Horgen",
       region: "Zürich",
@@ -31,7 +31,7 @@ export const siteConfig = {
       { days: "Samstag", hours: "09:00 – 13:00" },
       { days: "Sonntag", hours: "Geschlossen" },
     ],
-    mapLink: "https://maps.google.com/?q=Seestrasse+123,+8810+Horgen",
+    mapLink: "https://maps.google.com/?q=Eisenhofstrasse+2,+8810+Horgen",
   },
 
   // ============================================
