@@ -22,7 +22,7 @@ interface FormErrors {
 type FormStatus = "idle" | "submitting" | "success" | "error";
 
 export function Kontakt() {
-  const { practiceName, contact, form } = siteConfig;
+  const { contact, form } = siteConfig;
 
   const [formData, setFormData] = useState<FormData>({
     name: "",
