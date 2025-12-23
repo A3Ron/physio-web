@@ -7,7 +7,7 @@ export const siteConfig = {
   // ============================================
   // PRACTICE INFORMATION
   // ============================================
-  practiceName: "PhysioZentrum Horgen",
+  practiceName: "Rumpfwerk",
   tagline: "Ihre Gesundheit in besten Händen",
   description:
     "Professionelle Physiotherapie in Horgen am Zürichsee. Individuelle Behandlungen, erfahrene Therapeuten und modernste Methoden für Ihre Genesung.",
@@ -49,9 +49,9 @@ export const siteConfig = {
   // SEO & META
   // ============================================
   seo: {
-    siteUrl: "https://physio-horgen.ch",
-    title: "Physiotherapie Horgen | PhysioZentrum Horgen",
-    titleTemplate: "%s | PhysioZentrum Horgen",
+    siteUrl: "https://rumpfwerk.ch",
+    title: "Physiotherapie Horgen | Rumpfwerk",
+    titleTemplate: "%s | Rumpfwerk",
     defaultDescription:
       "Physiotherapie Horgen – Professionelle Behandlung am Zürichsee. Manuelle Therapie, Sportphysiotherapie, Rehabilitation. Jetzt Termin anfragen!",
     keywords: [
@@ -72,14 +72,14 @@ export const siteConfig = {
   // Change these values to update the entire site's color scheme
   // ============================================
   colors: {
-    primary: "#0d9488", // Teal - main brand color
-    primaryDark: "#0f766e", // Darker teal for hover states
-    secondary: "#f0fdfa", // Very light teal for backgrounds
-    accent: "#14b8a6", // Bright teal for accents
+    primary: "#96524c", // Kastanienbraun - main brand color
+    primaryDark: "#80413c", // Darker chestnut for hover states
+    secondary: "#fcf7f6", // Very light warm for backgrounds
+    accent: "#b4736c", // Soft chestnut accent
     background: "#ffffff", // Main background
-    surface: "#f8fafc", // Card/section backgrounds
-    text: "#1e293b", // Main text color
-    textMuted: "#64748b", // Secondary/muted text
+    surface: "#fdfaf9", // Card/section backgrounds
+    text: "#3a2a28", // Main text color (warm dark brown)
+    textMuted: "#826964", // Secondary/muted text
   },
 
   // ============================================

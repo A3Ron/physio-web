@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://physio-horgen.ch/sitemap.xml
+Sitemap: https://rumpfwerk.ch/sitemap.xml
 
 # Disallow admin/private areas (if any)
 Disallow: /api/

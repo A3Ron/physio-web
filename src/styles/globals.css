@@ -5,14 +5,15 @@
 @layer base {
   :root {
     /* RGB values for Tailwind opacity support */
-    --color-primary: 13 148 136;
-    --color-primary-dark: 15 118 110;
-    --color-secondary: 240 253 250;
-    --color-accent: 20 184 166;
+    /* Kastanienbraun (Chestnut Brown) color scheme */
+    --color-primary: 150 82 76;
+    --color-primary-dark: 128 65 60;
+    --color-secondary: 252 247 246;
+    --color-accent: 180 115 108;
     --color-background: 255 255 255;
-    --color-surface: 248 250 252;
-    --color-text: 30 41 59;
-    --color-text-muted: 100 116 139;
+    --color-surface: 253 250 249;
+    --color-text: 58 42 40;
+    --color-text-muted: 130 105 100;
   }
 
   html {
