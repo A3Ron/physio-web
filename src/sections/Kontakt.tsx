@@ -252,9 +252,9 @@ export function Kontakt() {
           </div>
         </FadeInView>
 
-        {/* Contact Information */}
+        {/* Quick Info - verweist auf Praxis Section */}
         <FadeInView delay={0.2}>
-          <div className="space-y-6">
+          <div className="flex h-full flex-col justify-center space-y-6">
             {/* Direct Contact */}
             <div className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-md">
               <h3 className="mb-4 text-lg font-semibold text-text">Direkter Kontakt</h3>
@@ -311,55 +311,14 @@ export function Kontakt() {
               </div>
             </div>
 
-            {/* Address */}
-            <div className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-md">
-              <h3 className="mb-4 text-lg font-semibold text-text">Besuchen Sie uns</h3>
-              <address className="not-italic text-text-muted">
-                <p className="font-medium text-text">{practiceName}</p>
-                <p>{contact.address.street}</p>
-                <p>
-                  {contact.address.zip} {contact.address.city}
-                </p>
-              </address>
-              <a
-                href={contact.mapLink}
-                className="mt-4 inline-flex items-center gap-2 text-sm font-medium text-primary hover:underline"
-              >
-                <svg
-                  className="h-4 w-4"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                  aria-hidden="true"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                  />
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                  />
-                </svg>
-                Route anzeigen
-              </a>
-            </div>
-
-            {/* Opening Hours */}
-            <div className="rounded-xl border border-gray-100 bg-white p-6 shadow-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-md">
-              <h3 className="mb-4 text-lg font-semibold text-text">Öffnungszeiten</h3>
-              <ul className="space-y-2 text-text-muted">
-                {contact.openingHours.map((schedule) => (
-                  <li key={schedule.days} className="flex justify-between">
-                    <span>{schedule.days}</span>
-                    <span className="font-medium text-text">{schedule.hours}</span>
-                  </li>
-                ))}
-              </ul>
+            {/* Link to Praxis Section */}
+            <div className="rounded-xl border border-gray-100 bg-white p-6 text-center shadow-sm">
+              <p className="text-text-muted">
+                Adresse, Öffnungszeiten & Anfahrt finden Sie unter{" "}
+                <a href="#praxis" className="font-medium text-primary hover:underline">
+                  Praxis & Lage
+                </a>
+              </p>
             </div>
           </div>
         </FadeInView>
